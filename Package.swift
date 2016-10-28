@@ -1,3 +1,10 @@
+//
+//  Package.swift
+//  Nomina-Romanorum
+//
+//  Created by Walter Carli on 28/10/16.
+//
+//
 import PackageDescription
 
 let package = Package(
