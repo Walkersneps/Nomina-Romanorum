@@ -1,2 +1,2 @@
-# Nomina-Romanorum
+# Nomina Romanorum
 Roman names generator
