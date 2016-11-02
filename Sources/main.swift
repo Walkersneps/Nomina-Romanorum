@@ -11,6 +11,12 @@ import PerfectHTTP
 import PerfectHTTPServer
 import Foundation
 
+// MARK: -- CONFIGURATION
+let serverPort: Int = 8181
+/* CONFIGURATION ENDS HERE */
+
+
+// MARK: -- NAMES
 let praenomina: [String] = ["Marcus",
                         "Gaius",
                         "Titus",
@@ -32,11 +38,15 @@ let cognomina: [String] = ["Coriolanus",
                         "Caesar"]
 
 
+// MARK: -- Program
+
 // Create HTTP server.
 let server = HTTPServer()
 
-// Register your own routes and handlers
+// Register routes and handlers
 var routes = Routes()
+
+// Default router
 routes.add(method: .get, uri:"/", handler: { request, response in
     let prae: Int = Int(arc4random_uniform(UInt32(praenomina.count)))
     let n: Int = Int(arc4random_uniform(UInt32(nomina.count)))
@@ -46,11 +56,14 @@ routes.add(method: .get, uri:"/", handler: { request, response in
     response.completed()
     })
 
+// Brusky's easter egg
 routes.add(method: .get, uri: "/brusky", handler: { request, response in
 		response.setHeader(.contentType, value: "text/html")
 		response.appendBody(string: "<html><title>PARACADUTE!</title><body>BRUSCHIIIIII!! <br><br> PARACADUTE! PARACADUTE!</body></html>")
 		response.completed()
 	})
+
+// My easter egg
 routes.add(method: .get, uri:"/w", handler: { request, response in
     response.setHeader(.contentType, value: "text/html")
     response.appendBody(string: "<html><title>YOOOOOOO</title><body>Walter è un fregno della madonna</body></html>")
@@ -61,17 +74,10 @@ routes.add(method: .get, uri:"/w", handler: { request, response in
 // Add the routes to the server.
 server.addRoutes(routes)
 
-// Set a listen port of 8181
-server.serverPort = 8181
-
-// Set a document root.
-// This is optional. If you do not want to serve static content then do not set this.
-// Setting the document root will automatically add a static file handler for the route /**
-server.documentRoot = "./webroot"
+// Set listen port
+server.serverPort = serverPort
 
 // Gather command line options and further configure the server.
-// Run the server with --help to see the list of supported arguments.
-// Command line arguments will supplant any of the values set above.
 configureServer(server)
 
 do {
