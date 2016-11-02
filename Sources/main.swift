@@ -12,7 +12,7 @@ import PerfectHTTPServer
 import Foundation
 
 // MARK: -- CONFIGURATION
-let serverPort: Int = 8181
+let serverPort: UInt16 = 8181
 /* CONFIGURATION ENDS HERE */
 
 
