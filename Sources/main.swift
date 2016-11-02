@@ -9,20 +9,51 @@
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
+import Foundation
+
+let praenomina: [String] = ["Marcus",
+                        "Gaius",
+                        "Titus",
+                        "Publius",
+                        "Lucius",
+                        "Cneus"]
+
+let nomina: [String] = ["Iulius",
+                        "Cornelius",
+                        "Claudius",
+                        "Cassius",
+                        "Sempronius",
+                        "Domitius"]
+
+let cognomina: [String] = ["Coriolanus",
+                        "Brutus",
+                        "Caligula",
+                        "Cato",
+                        "Caesar"]
+
 
 // Create HTTP server.
 let server = HTTPServer()
 
 // Register your own routes and handlers
 var routes = Routes()
-routes.add(method: .get, uri: "/", handler: { request, response in
+routes.add(method: .get, uri:"/", handler: { request, response in
+    let prae: Int = Int(arc4random_uniform(UInt32(praenomina.count)))
+    let n: Int = Int(arc4random_uniform(UInt32(nomina.count)))
+    let co: Int = Int(arc4random_uniform(UInt32(cognomina.count)))
+    response.setHeader(.contentType, value: "text/html")
+    response.appendBody(string: "<html><title>CARTHAGO DELENDA EST!</title><body>Il tuo nome romano è: <br><br> <b>\(praenomina[prae]) \(nomina[n]) \(cognomina[co])</b></body></html>")
+    response.completed()
+    })
+
+routes.add(method: .get, uri: "/brusky", handler: { request, response in
 		response.setHeader(.contentType, value: "text/html")
-		response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, world!</body></html>")
+		response.appendBody(string: "<html><title>PARACADUTE!</title><body>BRUSCHIIIIII!! <br><br> PARACADUTE! PARACADUTE!</body></html>")
 		response.completed()
 	})
 routes.add(method: .get, uri:"/w", handler: { request, response in
     response.setHeader(.contentType, value: "text/html")
-    response.appendBody(string: "<html><title>CARTHAGO DELENDA EST!</title><body>Hi Walter! - Ciao Walter!</body></html>")
+    response.appendBody(string: "<html><title>YOOOOOOO</title><body>Walter è un fregno della madonna</body></html>")
     response.completed()
     })
 
