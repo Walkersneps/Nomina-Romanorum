@@ -38,8 +38,20 @@ let cognomina: [String] = ["Coriolanus",
                         "Caesar"]
 
 
-// MARK: -- Program
+// MARK: -- Functions
+func buildName (from praenomina: [String], and nomina: [String], and cognomina: [String]) -> String {
+  let prae: Int = Int(arc4random_uniform(UInt32(praenomina.count)))
+  let n: Int = Int(arc4random_uniform(UInt32(nomina.count)))
+  let co: Int = Int(arc4random_uniform(UInt32(cognomina.count)))
 
+  return (praenomina[prae] + " " + nomina[n] + " " + cognomina[co])
+}
+
+// MARK: -- Properties
+let defaultHead: String = "<head><meta charset='utf-8'></head>"
+
+
+// MARK: -- Program
 // Create HTTP server.
 let server = HTTPServer()
 
@@ -48,25 +60,22 @@ var routes = Routes()
 
 // Default router
 routes.add(method: .get, uri:"/", handler: { request, response in
-    let prae: Int = Int(arc4random_uniform(UInt32(praenomina.count)))
-    let n: Int = Int(arc4random_uniform(UInt32(nomina.count)))
-    let co: Int = Int(arc4random_uniform(UInt32(cognomina.count)))
     response.setHeader(.contentType, value: "text/html")
-    response.appendBody(string: "<html><title>CARTHAGO DELENDA EST!</title><body>Il tuo nome romano è: <br><br> <b>\(praenomina[prae]) \(nomina[n]) \(cognomina[co])</b></body></html>")
+    response.appendBody(string: "<html>\(defaultHead)<title>CARTHAGO DELENDA EST!</title><body>Il tuo nome romano è: <br><br> <b>\(buildName(from: praenomina, and: nomina, and: cognomina))</b></body></html>")
     response.completed()
     })
 
 // Brusky's easter egg
 routes.add(method: .get, uri: "/brusky", handler: { request, response in
 		response.setHeader(.contentType, value: "text/html")
-		response.appendBody(string: "<html><title>PARACADUTE!</title><body>BRUSCHIIIIII!! <br><br> PARACADUTE! PARACADUTE!</body></html>")
+		response.appendBody(string: "<html>\(defaultHead)<title>PARACADUTE!</title><body>BRUSCHIIIIII!! <br><br> PARACADUTE! PARACADUTE!</body></html>")
 		response.completed()
 	})
 
 // My easter egg
 routes.add(method: .get, uri:"/w", handler: { request, response in
     response.setHeader(.contentType, value: "text/html")
-    response.appendBody(string: "<html><title>YOOOOOOO</title><body>Walter è un fregno della madonna</body></html>")
+    response.appendBody(string: "<html>\(defaultHead)<title>YOOOOOOO</title><body>Walter è un fregno della madonna</body></html>")
     response.completed()
     })
 
