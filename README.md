@@ -1,6 +1,4 @@
-# Nomina Romanorum
-![Swift](http://img.shields.io/badge/swift-3.0-brightgreen.svg)
-
+# Nomina Romanorum [![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/)
 Nomina Romanorum is a simple web app whose only purpose is to generate random roman names.
 Nomina Romanorum è una semplice web app il cui scopo, che è fondamentale per la società, è quello di generare casualmente nomi romani.
 
