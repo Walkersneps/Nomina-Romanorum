@@ -1,15 +1,7 @@
-# Basic Template
+# Nomina Romanorum
+Nomina Romanorum is a simple web app whose only purpose is to generate random roman names.
+Nomina Romanorum è una semplice web app il cui scopo, che è fondamentale per la società, è quello di generare casualmente nomi romani.
 
-A basic vapor template for starting a new Vapor web application. If you're using vapor toolbox, you can use: `vapor new --template=basic`
+========
 
-## 📖 Documentation
-
-Visit the Vapor web framework's [documentation](http://docs.vapor.codes) for instructions on how to use this package.
-
-## 💧 Community
-
-Join the welcoming community of fellow Vapor developers in [slack](http://vapor.team).
-
-## 🔧 Compatibility
-
-This package has been tested on macOS and Ubuntu.
+Nomina Romanorum is built on top of the awesome 💧[Vapor framework](https://github.com/vapor/vapor)💧.
