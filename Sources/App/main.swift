@@ -7,67 +7,9 @@ import Vapor
 
 
 // MARK: -- NAMES
-let praenomina: [String] = ["Marcus",
-                        "Gaius",
-                        "Titus",
-                        "Publius",
-                        "Lucius",
-                        "Cneus"]
-
-let nomina: [String] = ["Iulius",
-                        "Cornelius",
-                        "Claudius",
-                        "Cassius",
-                        "Sempronius",
-                        "Domitius"]
-
-let cognomina: [String] = [
-                        "Amandio",
-                        "Antigonus",
-                        "Antiochus",
-                        "Apollonius",
-                        "Apthorus",
-                        "Artemidorus",
-                        "Autobulus",
-                        "Bocchus",
-                        "Brutus",
-                        "Caecina",
-                        "Caesar",
-                        "Caligula",
-                        "Cato",
-                        "Chilo",
-                        "Coriolanus",
-                        "Cosmus",
-                        "Diodotus",
-                        "Diogenes",
-                        "Diotimus",
-                        "Epicydes",
-                        "Glycon",
-                        "Heraclides",
-                        "Hicesius",
-                        "Isidorus",
-                        "Micon",
-                        "Mithridates",
-                        "Narcissus",
-                        "Nicias",
-                        "Nicoteles",
-                        "Orthrus",
-                        "Paetas",
-                        "Parmenion",
-                        "Philadelphus",
-                        "Plocamus",
-                        "Pyramus",
-                        "Pythion",
-                        "Raphael",
-                        "Sophus",
-                        "Soterides",
-                        "Tarautas",
-                        "Thalamus",
-                        "Theodorus",
-                        "Theodotus",
-                        "Trophimus",
-                        "Vassus",
-                        "Vespillo"]
+let praenominaObj = Praenomina(); let praenomina = praenominaObj.list
+let nominaObj = Nomina(); let nomina = nominaObj.list
+let cognominaObj = Cognomina(); let cognomina = cognominaObj.list
 
 
 // MARK: -- Functions
