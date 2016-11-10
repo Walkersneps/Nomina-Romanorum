@@ -1,10 +1,23 @@
 public struct Praenomina {
   let list: [String] = [
-                        "Marcus",
+                        "Appius",
+                        "Aulus",
+                        "Decimus",
                         "Gaius",
-                        "Titus",
-                        "Publius",
+                        "Gneus",
+                        "Kaeso",
                         "Lucius",
-                        "Cneus"
+                        "Mamercus",
+                        "Manius",
+                        "Marcus",
+                        "Numerius",
+                        "Publius",
+                        "Quintus",
+                        "Servius",
+                        "Sextus",
+                        "Spurius",
+                        "Tiberius",
+                        "Titus",
+                        "Vibius"
                       ]
 }
