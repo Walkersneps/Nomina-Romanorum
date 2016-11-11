@@ -32,8 +32,29 @@ drop.get("list", Int.self) { req, amount in
   return names
 }
 
+
+// MARK: API
+//eqivalent of /list but JSON-encoded
+drop.get("api", "list", Int.self) { req, amount in
+  guard amount <= maxList else { //check we aren't requesting too many names
+      return try JSON(node: ["code": "0",
+                            "status": "error",
+                            "errCode": "1",
+                            "description": "parameter 'amount' is too big",
+                            "maxNumericParam": String(maxList)])
+  }
+
+  var nameDict: [String: String] = [:]
+  for i in 0 ..< amount {
+    nameDict["name\(i)"] = nameBuilder.next()
+  }
+  return try JSON(node: nameDict)
+}
+
+
+
 //Brusky's easter egg
-drop.get("/brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
+drop.get("brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
 
 //my easter egg
 drop.get("w") { req in return "Walter è un fregno della madonna\n" }
