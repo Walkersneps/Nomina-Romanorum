@@ -1,6 +1,7 @@
 import Vapor
 
 // MARK: -- Properties
+let maxList: Int = 100 //Maximum amount of names which can be reqested in one shot
 //let defaultHead: String = "<head><meta charset='utf-8'></head>"
 
 
@@ -18,6 +19,18 @@ print("Incipit executio!")
 // MARK: Register routes and handlers
 //default route -> name generation
 drop.get { req in return nameBuilder.next() }
+
+//get many names all at once
+drop.get("list", Int.self) { req, amount in
+  guard amount <= maxList else { //check we aren't requesting too many names
+      return "ERROR: Parameter 'amount' must be a natural number between 0 and \(maxList).\nYou can't request more than \(maxList) names all at once.\n\nNon è possibile richiedere più di \(maxList) nomi in un colpo solo.\n"
+  }
+  var names: String = ""
+  for i in 0 ..< amount {
+    names += "\(nameBuilder.next())\n"
+  }
+  return names
+}
 
 //Brusky's easter egg
 drop.get("/brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!" }
