@@ -1,7 +1,7 @@
 import Vapor
 
 // MARK: -- Properties
-let maxList: Int = 100 //Maximum amount of names which can be reqested in one shot
+let maxList: Int = 5 //Maximum amount of names which can be reqested in one shot
 //let defaultHead: String = "<head><meta charset='utf-8'></head>"
 
 
