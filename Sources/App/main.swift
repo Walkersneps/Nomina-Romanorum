@@ -34,6 +34,8 @@ drop.get("list", Int.self) { req, amount in
 
 
 // MARK: API
+drop.get("api") { req in return try JSON(node: ["name": nameBuilder.next()]) }
+
 //eqivalent of /list but JSON-encoded
 drop.get("api", "list", Int.self) { req, amount in
   guard amount <= maxList else { //check we aren't requesting too many names
