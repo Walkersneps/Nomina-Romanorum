@@ -1,7 +1,7 @@
 import Vapor
 
 // MARK: -- Properties
-let defaultHead: String = "<head><meta charset='utf-8'></head>"
+//let defaultHead: String = "<head><meta charset='utf-8'></head>"
 
 
 // MARK: -- Configuration
