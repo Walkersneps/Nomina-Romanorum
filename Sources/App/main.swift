@@ -18,7 +18,7 @@ print("Configuratione completa est!\n\n")
 print("Incipit executio!")
 // MARK: Register routes and handlers
 //default route -> name generation
-drop.get { req in return nameBuilder.next() }
+drop.get { req in return "\(nameBuilder.next())\n" }
 
 //get many names all at once
 drop.get("list", Int.self) { req, amount in
@@ -33,10 +33,10 @@ drop.get("list", Int.self) { req, amount in
 }
 
 //Brusky's easter egg
-drop.get("/brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!" }
+drop.get("/brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
 
 //my easter egg
-drop.get("w") { req in return "Walter è un fregno della madonna" }
+drop.get("w") { req in return "Walter è un fregno della madonna\n" }
 
 
 // MARK: Server start
