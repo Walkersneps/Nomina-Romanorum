@@ -17,17 +17,19 @@ public struct NameBuilder {
     print("Cognomina sunt: \(cognomina)")
     print("Nomina docta sunt\n")
   }
+  
+  private func randomInt (min: Int, max: Int) -> Int {
+    #if os(Linux)
+      return Gblibc.random() % max
+    #else
+      return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    #endif
+  }
 
   private func buildName (from praenomina: [String], and nomina: [String], and cognomina: [String]) -> String {
-    #if os(Linux)
-      let prae: Int = Int(random() % (praenomina.count + 1))
-      let n: Int = Int(random() % (nomina.count + 1))
-      let co: Int = Int(random() % (cognomina.count + 1))
-    #else
-      let prae: Int = Int(arc4random_uniform(UInt32(praenomina.count)))
-      let n: Int = Int(arc4random_uniform(UInt32(nomina.count)))
-      let co: Int = Int(arc4random_uniform(UInt32(cognomina.count)))
-    #endif
+    let prae: Int = randomInt(min: 0, max: praenomina.count)
+    let n: Int = randomInt(min: 0, max: nomina.count)
+    let co: Int = randomInt(min: 0, max: cognomina.count)
 
     return (praenomina[prae] + " " + nomina[n] + " " + cognomina[co])
   }
