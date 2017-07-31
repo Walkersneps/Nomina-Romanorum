@@ -20,7 +20,7 @@ public struct NameBuilder {
   
   private func randomInt (min: Int, max: Int) -> Int {
     #if os(Linux)
-      return Gblibc.random() % max
+      return Glibc.random() % max
     #else
       return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     #endif
