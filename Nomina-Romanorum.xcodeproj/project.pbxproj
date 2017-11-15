@@ -34,6 +34,7 @@
 		D1F3DD5C1FBCF24500686F9E /* Praenomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */; };
 		D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */; };
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
+		D1F3DD631FBCF3E100686F9E /* NameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD621FBCF3E100686F9E /* NameBuilder.swift */; };
 		OBJ_1015 /* PostControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* PostControllerTests.swift */; };
 		OBJ_1016 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* RouteTests.swift */; };
 		OBJ_1017 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Utilities.swift */; };
@@ -3560,6 +3561,7 @@
 		D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Praenomina.swift; path = Sources/App/Names/Praenomina.swift; sourceTree = SOURCE_ROOT; };
 		D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomina.swift; sourceTree = "<group>"; };
 		D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognomina.swift; sourceTree = "<group>"; };
+		D1F3DD621FBCF3E100686F9E /* NameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameBuilder.swift; path = Sources/App/NameBuilding/NameBuilder.swift; sourceTree = SOURCE_ROOT; };
 		"Debugging::Debugging::Product" /* Debugging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Debugging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Engine::CHTTP::Product" /* CHTTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CHTTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Engine::Cookies::Product" /* Cookies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cookies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4798,6 +4800,15 @@
 			);
 			name = Names;
 			path = Sources/App/Names;
+			sourceTree = SOURCE_ROOT;
+		};
+		D1F3DD611FBCF3A400686F9E /* NameBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				D1F3DD621FBCF3E100686F9E /* NameBuilder.swift */,
+			);
+			name = NameBuilding;
+			path = Sources/App/NameBuilding;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_11 /* Models */ = {
@@ -6772,6 +6783,7 @@
 		OBJ_8 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D1F3DD611FBCF3A400686F9E /* NameBuilding */,
 				D1F3DD5A1FBCF1B400686F9E /* Names */,
 				OBJ_9 /* Controllers */,
 				OBJ_11 /* Models */,
@@ -8168,6 +8180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				D1F3DD631FBCF3E100686F9E /* NameBuilder.swift in Sources */,
 				D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */,
 				OBJ_1159 /* PostController.swift in Sources */,
 				OBJ_1160 /* Post.swift in Sources */,
