@@ -30,7 +30,8 @@ public struct NameBuilder {
         #if os(Linux)
             return Glibc.random() % max
         #else
-            return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+            //return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+            return Int(arc4random_uniform(UInt32(max)))
         #endif
     }
 
