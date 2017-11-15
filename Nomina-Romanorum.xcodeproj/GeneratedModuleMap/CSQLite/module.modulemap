@@ -1,0 +1,4 @@
+module CSQLite {
+    umbrella "/Users/walter/Documents/Developer/Nomina-Romanorum/Nomina-Romanorum/.build/checkouts/sqlite.git--8232814251736334455/Sources/CSQLite/include"
+    export *
+}
