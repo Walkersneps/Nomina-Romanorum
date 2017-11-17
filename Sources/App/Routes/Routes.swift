@@ -57,6 +57,17 @@ extension Droplet {
         }
 
 
+        //MARK: Tests
+        get("hello") { req in return "Hello World!" }
+        get("hello", String.parameter) { req in
+            var json = JSON() //create a JSON object
+            let kind = try req.parameters.next(String.self) //get the parameter (response type)
+            guard kind == "json" else { try json.set("error", "Bad Request"); return json } //check we've been asked for a JSON
+            try json.set("hello", "world"); return json //answer with a fancy JSON
+        }
+        get("info") { req in return req.description }
+
+
         //MARK: Easter Eggs
         //Brusky's easter egg
         get("brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
