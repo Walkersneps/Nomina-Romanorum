@@ -24,7 +24,7 @@ class RouteTests: TestCase {
             .testResponse(to: .get, at: "hello/json")
             .assertStatus(is: .ok)
             .assertJSON("hello", equals: "world")
-        try drop
+        try drop //bad request
             .testResponse(to: .get, at: "hello/badreq")
             .assertStatus(is: .ok)
             .assertJSON("error", equals: "Bad Request")
@@ -44,6 +44,25 @@ class RouteTests: TestCase {
             .testResponse(to: .get, at: "/")
             .assertStatus(is: .ok)
     }
+
+    func testManyNamesPlain() throws {
+        try drop //no argument supplied
+            .testResponse(to: .get, at: "list")
+            .assertStatus(is: .ok)
+            .assertBody(contains: "ERROR")
+        try drop
+            .testResponse(to: .get, at: "list/2")
+            .assertStatus(is: .ok)
+            .assertBody(contains: "\n")
+    }
+
+    func testManyNamesJSON() throws {
+        try drop
+            .testResponse(to: .get, at: "api/list/2")
+            .assertStatus(is: .ok)
+    }
+
+
 }
 
 
