@@ -31,7 +31,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		D1C40C711FBF3E76003A0D88 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C40C701FBF3E76003A0D88 /* LinuxMain.swift */; };
 		D1F3DD5C1FBCF24500686F9E /* Praenomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */; };
 		D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */; };
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
@@ -3559,7 +3558,6 @@
 		"Core::Core::Product" /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Core::libc::Product" /* libc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = libc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Crypto::Crypto::Product" /* Crypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Crypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1C40C701FBF3E76003A0D88 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = Tests/LinuxMain.swift; sourceTree = "<group>"; };
 		D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Praenomina.swift; path = Sources/App/Names/Praenomina.swift; sourceTree = SOURCE_ROOT; };
 		D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomina.swift; sourceTree = "<group>"; };
 		D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognomina.swift; sourceTree = "<group>"; };
@@ -5115,7 +5113,6 @@
 		OBJ_20 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D1C40C701FBF3E76003A0D88 /* LinuxMain.swift */,
 				OBJ_21 /* AppTests */,
 			);
 			name = Tests;
@@ -8171,7 +8168,6 @@
 			files = (
 				OBJ_1092 /* Bytes.swift in Sources */,
 				OBJ_1093 /* Exports.swift in Sources */,
-				D1C40C711FBF3E76003A0D88 /* LinuxMain.swift in Sources */,
 				OBJ_1094 /* Request.swift in Sources */,
 				OBJ_1095 /* Responder.swift in Sources */,
 				OBJ_1096 /* Response.swift in Sources */,
