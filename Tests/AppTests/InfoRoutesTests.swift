@@ -8,10 +8,9 @@ import HTTP
 /// This file shows an example of testing 
 /// routes through the Droplet.
 
-class RouteTests: TestCase {
+class InfoRouteTests: TestCase {
     let drop = try! Droplet.testable()
 
-    // MARK: - Info Checks
     func testHelloPlain() throws {
         try drop
             .testResponse(to: .get, at: "hello")
@@ -36,55 +35,11 @@ class RouteTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(contains: "0.0.0.0")
     }
-
-
-    // MARK: - Route Tests
-    func testSingleName() throws {
-        try drop
-            .testResponse(to: .get, at: "/")
-            .assertStatus(is: .ok)
-            .assertBody(contains: " ")
-    }
-
-    func testManyNamesPlain() throws {
-        try drop // no argument supplied
-            .testResponse(to: .get, at: "list")
-            .assertStatus(is: .ok)
-            .assertBody(contains: "ERROR")
-        try drop
-            .testResponse(to: .get, at: "list/2")
-            .assertStatus(is: .ok)
-            .assertBody(contains: "\n")
-    }
-
-    func testSingleNameJSON() throws {
-        try drop
-            .testResponse(to: .get, at: "api")
-            .assertStatus(is: .ok)
-    }
-
-    func testManyNamesJSON() throws {
-        try drop // amount too big
-            .testResponse(to: .get, at: "api/list/99999999999999999")
-            .assertStatus(is: .ok)
-            .assertJSON("status", equals: "error")
-            .assertJSON("errCode", equals: "1")
-        try drop // no amount parameter supplied
-            .testResponse(to: .get, at: "/api/list")
-            .assertStatus(is: .ok)
-            .assertJSON("status", equals: "error")
-            .assertJSON("errCode", equals: "2")
-        try drop
-            .testResponse(to: .get, at: "api/list/2")
-            .assertStatus(is: .ok)
-    }
-
-
 }
 
 
 // MARK: - Manifest
-extension RouteTests {
+extension InfoRouteTests {
     /// This is a requirement for XCTest on Linux
     /// to function properly.
     /// See ./Tests/LinuxMain.swift for examples
@@ -92,6 +47,5 @@ extension RouteTests {
         ("testHelloPlain", testHelloPlain),
         ("testHelloJSON", testHelloJSON),
         ("testInfo", testInfo),
-        ("testSingleName", testSingleName),
     ]
 }
