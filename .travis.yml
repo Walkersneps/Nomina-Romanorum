@@ -8,7 +8,7 @@ dist: trusty
 osx_image: xcode9.1
 before_install:
     - if [ $TRAVIS_OS_NAME == "osx" ]; then
-            swift --version
+            swift --version;
             brew tap vapor/tap;
             brew update;
             brew install vapor;
