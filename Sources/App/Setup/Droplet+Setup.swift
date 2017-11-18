@@ -2,7 +2,10 @@
 
 extension Droplet {
     public func setup() throws {
+        print("\n Praeparando Nomina-Romanorum...")
+
         try setupRoutes()
-        // Do any additional droplet setup
+
+        print("Configuratione completa est!\n\n")
     }
 }

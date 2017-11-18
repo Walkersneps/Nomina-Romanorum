@@ -22,4 +22,5 @@ try config.setup()
 let drop = try Droplet(config)
 try drop.setup()
 
+print("Incipit executio!")
 try drop.run()
