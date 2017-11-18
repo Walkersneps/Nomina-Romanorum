@@ -36,6 +36,7 @@
 		D155B39E1FC07E3900AFD124 /* EasterEggsRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */; };
 		D155B3A01FC0864800AFD124 /* PlainNamesRoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */; };
 		D155B3A21FC08BC300AFD124 /* JSONNamesRoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B3A11FC08BC300AFD124 /* JSONNamesRoutesTests.swift */; };
+		D155B3A41FC08FCA00AFD124 /* EasterEggsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B3A31FC08FCA00AFD124 /* EasterEggsTests.swift */; };
 		D1F3DD5C1FBCF24500686F9E /* Praenomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */; };
 		D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */; };
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
@@ -3568,6 +3569,7 @@
 		D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggsRoutes.swift; sourceTree = "<group>"; };
 		D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainNamesRoutesTests.swift; sourceTree = "<group>"; };
 		D155B3A11FC08BC300AFD124 /* JSONNamesRoutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNamesRoutesTests.swift; sourceTree = "<group>"; };
+		D155B3A31FC08FCA00AFD124 /* EasterEggsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggsTests.swift; sourceTree = "<group>"; };
 		D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Praenomina.swift; path = Sources/App/Names/Praenomina.swift; sourceTree = SOURCE_ROOT; };
 		D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomina.swift; sourceTree = "<group>"; };
 		D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognomina.swift; sourceTree = "<group>"; };
@@ -5166,6 +5168,7 @@
 				OBJ_23 /* InfoRoutesTests.swift */,
 				D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */,
 				D155B3A11FC08BC300AFD124 /* JSONNamesRoutesTests.swift */,
+				D155B3A31FC08FCA00AFD124 /* EasterEggsTests.swift */,
 				OBJ_22 /* PostControllerTests.swift */,
 				OBJ_24 /* Utilities.swift */,
 			);
@@ -8174,6 +8177,7 @@
 				OBJ_1015 /* PostControllerTests.swift in Sources */,
 				OBJ_1016 /* InfoRoutesTests.swift in Sources */,
 				OBJ_1017 /* Utilities.swift in Sources */,
+				D155B3A41FC08FCA00AFD124 /* EasterEggsTests.swift in Sources */,
 				D155B3A01FC0864800AFD124 /* PlainNamesRoutesTests.swift in Sources */,
 				D155B3A21FC08BC300AFD124 /* JSONNamesRoutesTests.swift in Sources */,
 			);

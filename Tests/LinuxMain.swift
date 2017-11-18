@@ -9,6 +9,7 @@ XCTMain([
     testCase(InfoRoutesTests.allTests),
     testCase(PlainNamesRoutesTests.allTests),
     testCase(JSONNamesRoutesTests.allTests),
+    testCase(EasterEggsTests.allTests)
 ])
 
 #endif
