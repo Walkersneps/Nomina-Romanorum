@@ -57,7 +57,23 @@ class RouteTests: TestCase {
             .assertBody(contains: "\n")
     }
 
+    func testSingleNameJSON() throws {
+        try drop
+            .testResponse(to: .get, at: "api")
+            .assertStatus(is: .ok)
+    }
+
     func testManyNamesJSON() throws {
+        try drop //amount too big
+            .testResponse(to: .get, at: "api/list/99999999999999999")
+            .assertStatus(is: .ok)
+            .assertJSON("status", equals: "error")
+            .assertJSON("errCode", equals: "1")
+        try drop //no amount parameter supplied
+            .testResponse(to: .get, at: "/api/list")
+            .assertStatus(is: .ok)
+            .assertJSON("status", equals: "error")
+            .assertJSON("errCode", equals: "2")
         try drop
             .testResponse(to: .get, at: "api/list/2")
             .assertStatus(is: .ok)
