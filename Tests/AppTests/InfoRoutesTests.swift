@@ -8,7 +8,7 @@ import HTTP
 /// This file shows an example of testing
 /// routes through the Droplet.
 
-class InfoRouteTests: TestCase {
+class InfoRoutesTests: TestCase {
     let drop = try! Droplet.testable()
 
     func testHelloPlain() throws {
@@ -40,7 +40,7 @@ class InfoRouteTests: TestCase {
 
 
 // MARK: - Manifest
-extension InfoRouteTests {
+extension InfoRoutesTests {
     /// This is a requirement for XCTest on Linux
     /// to function properly.
     /// See ./Tests/LinuxMain.swift for examples
