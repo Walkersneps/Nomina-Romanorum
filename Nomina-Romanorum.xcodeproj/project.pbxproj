@@ -40,7 +40,7 @@
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
 		D1F3DD631FBCF3E100686F9E /* NameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD621FBCF3E100686F9E /* NameBuilder.swift */; };
 		OBJ_1015 /* PostControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* PostControllerTests.swift */; };
-		OBJ_1016 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* RouteTests.swift */; };
+		OBJ_1016 /* InfoRoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* InfoRoutesTests.swift */; };
 		OBJ_1017 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Utilities.swift */; };
 		OBJ_1019 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Testing::Product" /* Testing.framework */; };
 		OBJ_1020 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nomina-Romanorum::App::Product" /* App.framework */; };
@@ -3695,7 +3695,7 @@
 		OBJ_226 /* ServerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerFactoryProtocol.swift; sourceTree = "<group>"; };
 		OBJ_227 /* ServerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerProtocol.swift; sourceTree = "<group>"; };
 		OBJ_229 /* Abort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abort.swift; sourceTree = "<group>"; };
-		OBJ_23 /* RouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* InfoRoutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRoutesTests.swift; sourceTree = "<group>"; };
 		OBJ_230 /* AbortError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbortError.swift; sourceTree = "<group>"; };
 		OBJ_231 /* ErrorMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMiddleware.swift; sourceTree = "<group>"; };
 		OBJ_232 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -5161,10 +5161,10 @@
 		OBJ_21 /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* PostControllerTests.swift */,
-				OBJ_23 /* RouteTests.swift */,
-				OBJ_24 /* Utilities.swift */,
+				OBJ_23 /* InfoRoutesTests.swift */,
 				D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */,
+				OBJ_22 /* PostControllerTests.swift */,
+				OBJ_24 /* Utilities.swift */,
 			);
 			name = AppTests;
 			path = Tests/AppTests;
@@ -8169,7 +8169,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_1015 /* PostControllerTests.swift in Sources */,
-				OBJ_1016 /* RouteTests.swift in Sources */,
+				OBJ_1016 /* InfoRoutesTests.swift in Sources */,
 				OBJ_1017 /* Utilities.swift in Sources */,
 				D155B3A01FC0864800AFD124 /* PlainNamesRoutesTests.swift in Sources */,
 			);
