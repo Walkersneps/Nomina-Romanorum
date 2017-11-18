@@ -43,11 +43,11 @@ extension Droplet {
         //eqivalent of /list but JSON-encoded
         get("api", "list", Int.parameter) { req in
             let amount = try req.parameters.next(Int.self)
-            guard amount <= maxList else { //check we aren't requesting too many names
+            guard amount <= maxList && amount > 0 else { //check we aren't requesting too many names or zero names
                 return try JSON(node: ["code": "0",
                                        "status": "error",
                                        "errCode": "1",
-                                       "description": "parameter 'amount' is too big",
+                                       "description": "parameter 'amount' is either too big or smaller than 1",
                                        "maxNumericParam": String(maxList)])
             }
 
@@ -57,6 +57,9 @@ extension Droplet {
             }
             return try JSON(node: nameDict)
         }
+
+        //in case the user hasn't specified how many names he wants
+        get("api/list") { _ in return try JSON(node: ["code": "0", "status": "error", "errCode": "2", "description": "must supply numeric parameter"])}
 
 
         // MARK: Tests
