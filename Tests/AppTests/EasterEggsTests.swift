@@ -12,13 +12,6 @@ import XCTest
 class EasterEggsTests: TestCase {
     let drop = try! Droplet.testable()
 
-    func testHelloPlain() throws {
-        try drop
-            .testResponse(to: .get, at: "hello")
-            .assertStatus(is: .ok)
-            .assertBody(equals: "Hello World!")
-    }
-
     func testBrusky() throws {
         try drop
             .testResponse(to: .get, at: "brusky")
@@ -32,10 +25,7 @@ class EasterEggsTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(contains: "Walter")
     }
-
-
 }
-
 
 // MARK: - Manifest
 extension EasterEggsTests {
