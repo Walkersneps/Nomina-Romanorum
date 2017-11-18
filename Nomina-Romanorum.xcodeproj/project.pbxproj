@@ -31,6 +31,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D155B39A1FC0769400AFD124 /* PlainNamesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */; };
+		D155B39C1FC077EC00AFD124 /* JSONNamesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */; };
+		D155B39E1FC07E3900AFD124 /* EasterEggsRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */; };
 		D1F3DD5C1FBCF24500686F9E /* Praenomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */; };
 		D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */; };
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
@@ -3558,6 +3561,9 @@
 		"Core::Core::Product" /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Core::libc::Product" /* libc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = libc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Crypto::Crypto::Product" /* Crypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Crypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainNamesRoutes.swift; sourceTree = "<group>"; };
+		D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNamesRoutes.swift; sourceTree = "<group>"; };
+		D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggsRoutes.swift; sourceTree = "<group>"; };
 		D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Praenomina.swift; path = Sources/App/Names/Praenomina.swift; sourceTree = SOURCE_ROOT; };
 		D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomina.swift; sourceTree = "<group>"; };
 		D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognomina.swift; sourceTree = "<group>"; };
@@ -4878,6 +4884,9 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Routes.swift */,
+				D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */,
+				D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */,
+				D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -8182,7 +8191,10 @@
 				D1F3DD631FBCF3E100686F9E /* NameBuilder.swift in Sources */,
 				D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */,
 				OBJ_1159 /* PostController.swift in Sources */,
+				D155B39A1FC0769400AFD124 /* PlainNamesRoutes.swift in Sources */,
 				OBJ_1160 /* Post.swift in Sources */,
+				D155B39E1FC07E3900AFD124 /* EasterEggsRoutes.swift in Sources */,
+				D155B39C1FC077EC00AFD124 /* JSONNamesRoutes.swift in Sources */,
 				OBJ_1161 /* Routes.swift in Sources */,
 				OBJ_1162 /* Config+Setup.swift in Sources */,
 				D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */,
