@@ -6,6 +6,7 @@ import Testing
 import FluentProvider
 
 extension Droplet {
+
     static func testable() throws -> Droplet {
         let config = try Config(arguments: ["vapor", "--env=test"])
         try config.setup()
@@ -13,6 +14,7 @@ extension Droplet {
         try drop.setup()
         return drop
     }
+
     func serveInBackground() throws {
         background {
             try! self.run()
@@ -22,6 +24,7 @@ extension Droplet {
 }
 
 class TestCase: XCTestCase {
+    
     override func setUp() {
         Node.fuzzy = [Row.self, JSON.self, Node.self]
         Testing.onFail = XCTFail

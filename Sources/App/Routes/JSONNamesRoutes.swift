@@ -8,10 +8,11 @@
 import Vapor
 
 extension Droplet {
+
     func setupJSONNamesRoutes (maximum maxList: Int) throws {
         // single request
         get("api") { req in return try JSON(node: ["name": NameBuilder.next()]) }
-        
+
         // eqivalent of /list but JSON-encoded (many names in a signle JSON)
         get("api", "list", Int.parameter) { req in
             let amount = try req.parameters.next(Int.self)
@@ -30,4 +31,5 @@ extension Droplet {
         // in case the user hasn't specified how many names he wants
         get("api/list") { _ in return try JSON(node: ["code": "0", "status": "error", "errCode": "2", "description": "must supply numeric parameter"])}
     }
+    
 }

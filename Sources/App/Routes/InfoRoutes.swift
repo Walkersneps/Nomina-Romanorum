@@ -1,6 +1,7 @@
 import Vapor
 
 extension Droplet {
+    
     func setupInfoRoutes() throws {
         // plain hello
         get("hello") { _ in return "Hello World!" }
@@ -19,4 +20,5 @@ extension Droplet {
         // idk what this does, but it was in the template, so I'm not gonna remove it
         try resource("posts", PostController.self)
     }
+    
 }

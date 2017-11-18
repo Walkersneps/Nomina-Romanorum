@@ -6,7 +6,7 @@ final class Post: Model {
     let storage = Storage()
 
     // MARK: Properties and database keys
-    
+
     /// The content of the post
     var content: String
     
@@ -35,11 +35,13 @@ final class Post: Model {
         try row.set(Post.Keys.content, content)
         return row
     }
+
 }
 
 // MARK: Fluent Preparation
 
 extension Post: Preparation {
+    
     /// Prepares a table/collection in the database
     /// for storing Posts
     static func prepare(_ database: Database) throws {
@@ -81,7 +83,7 @@ extension Post: JSONConvertible {
 
 // This allows Post models to be returned
 // directly in route closures
-extension Post: ResponseRepresentable { }
+extension Post: ResponseRepresentable {}
 
 // MARK: Update
 

@@ -5,7 +5,7 @@ import HTTP
 @testable import Vapor
 @testable import App
 
-/// This file shows an example of testing 
+/// This file shows an example of testing
 /// routes through the Droplet.
 
 class InfoRouteTests: TestCase {
@@ -17,7 +17,7 @@ class InfoRouteTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(equals: "Hello World!")
     }
-    
+
     func testHelloJSON() throws {
         try drop
             .testResponse(to: .get, at: "hello/json")
@@ -35,6 +35,7 @@ class InfoRouteTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(contains: "0.0.0.0")
     }
+    
 }
 
 

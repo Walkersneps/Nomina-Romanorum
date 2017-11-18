@@ -11,7 +11,7 @@ import XCTest
 
 class JSONNamesRoutesTests: TestCase {
     let drop = try! Droplet.testable()
-    
+
     func testSingleNameJSON() throws {
         try drop
             .testResponse(to: .get, at: "api")
@@ -33,6 +33,7 @@ class JSONNamesRoutesTests: TestCase {
             .testResponse(to: .get, at: "api/list/2")
             .assertStatus(is: .ok)
     }
+    
 }
 
 // MARK: - Manifest

@@ -1,6 +1,7 @@
 @_exported import Vapor
 
 extension Droplet {
+
     public func setup() throws {
         // MARK: - Properties
         let maxRequestableNames: Int = 100
@@ -13,4 +14,5 @@ extension Droplet {
         try setupEasterEggsRoutes()
         print("Configuratione completa est!\n\n")
     }
+    
 }

@@ -30,6 +30,7 @@ class PlainNamesRoutesTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(contains: "\n")
     }
+    
 }
 
 // MARK: - Manifest

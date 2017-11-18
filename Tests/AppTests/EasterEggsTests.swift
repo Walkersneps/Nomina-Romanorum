@@ -25,6 +25,7 @@ class EasterEggsTests: TestCase {
             .assertStatus(is: .ok)
             .assertBody(contains: "Walter")
     }
+    
 }
 
 // MARK: - Manifest

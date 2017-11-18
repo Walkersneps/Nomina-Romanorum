@@ -8,8 +8,9 @@
 import Vapor
 
 extension Droplet {
+
     func setupPlainNamesRoutes(maximum maxList: Int) throws {
-        //default route -> name generation
+        // default route -> name generation
         get { _ in return "\(NameBuilder.next())\n" }
 
         // get many names all at once
@@ -25,4 +26,5 @@ extension Droplet {
         // in case the user hasn't specified how many names he wants
         get("list") { _ in return "ERROR: You must specify how many names you want me to generate, by the format '/list/amount', where 'amount is a numeric variable parameter between 1 and \(maxList).\n\nDevi specificare quanti nomi vuoi che siano generati, secondo il formato '/list/amount', dove 'amount' è un parametro numerico variabile a tua scelta compreso tra 1 e \(maxList).\n" }
     }
+    
 }
