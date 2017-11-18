@@ -43,6 +43,7 @@ class RouteTests: TestCase {
         try drop
             .testResponse(to: .get, at: "/")
             .assertStatus(is: .ok)
+            .assertBody(contains: " ")
     }
 
     func testManyNamesPlain() throws {
