@@ -3,11 +3,11 @@ import Vapor
 extension Droplet {
     func setupRoutes() throws {
 
-        // MARK: -- Properties
+        // MARK: - Properties
         let maxList: Int = 100 //Maximum amount of names which can be reqested in one shot
         //let defaultHead: String = "<head><meta charset='utf-8'></head>"
 
-        // MARK: -- Configuration
+        // MARK: - Configuration
         print("\n Praeparando Nomina-Romanorum...")
         print("Docendo artem operandi...")
         let nameBuilder = NameBuilder() // create NameBuilder object
@@ -15,11 +15,11 @@ extension Droplet {
         print("Configuratione completa est!\n\n")
 
 
-        // MARK: -- Routes
+        // MARK: - -Routes
         print("Incipit executio!")
 
         //default route -> name generation
-        get { req in return "\(nameBuilder.next())\n" }
+        get { _ in return "\(nameBuilder.next())\n" }
 
         //get many names all at once
         get("list", Int.parameter) { req in
@@ -34,7 +34,7 @@ extension Droplet {
         }
 
         //in case the user hasn't specified how many names he wants
-        get("list") { req in return "ERROR: You must specify how many names you want me to generate, by the format '/list/amount', where 'amount is a numeric variable parameter between 1 and \(maxList).\n\nDevi specificare quanti nomi vuoi che siano generati, secondo il formato '/list/amount', dove 'amount' è un parametro numerico variabile a tua scelta compreso tra 1 e \(maxList).\n" }
+        get("list") { _ in return "ERROR: You must specify how many names you want me to generate, by the format '/list/amount', where 'amount is a numeric variable parameter between 1 and \(maxList).\n\nDevi specificare quanti nomi vuoi che siano generati, secondo il formato '/list/amount', dove 'amount' è un parametro numerico variabile a tua scelta compreso tra 1 e \(maxList).\n" }
 
 
         // MARK: API
@@ -59,8 +59,8 @@ extension Droplet {
         }
 
 
-        //MARK: Tests
-        get("hello") { req in return "Hello World!" }
+        // MARK: Tests
+        get("hello") { _ in return "Hello World!" }
         get("hello", String.parameter) { req in
             var json = JSON() //create a JSON object
             let kind = try req.parameters.next(String.self) //get the parameter (response type)
@@ -70,12 +70,12 @@ extension Droplet {
         get("info") { req in return req.description }
 
 
-        //MARK: Easter Eggs
+        // MARK: Easter Eggs
         //Brusky's easter egg
-        get("brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
+        get("brusky") { _ in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
 
         //my easter egg
-        get("w") { req in return "Walter è un fregno della madonna\n" }
+        get("w") { _ in return "Walter è un fregno della madonna\n" }
 
 
 
