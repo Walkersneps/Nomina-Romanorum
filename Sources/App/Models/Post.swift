@@ -4,7 +4,7 @@ import HTTP
 
 final class Post: Model {
     let storage = Storage()
-    
+
     // MARK: Properties and database keys
     
     /// The content of the post

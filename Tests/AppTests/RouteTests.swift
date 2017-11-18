@@ -11,7 +11,7 @@ import HTTP
 class RouteTests: TestCase {
     let drop = try! Droplet.testable()
 
-    //MARK: -- Preliminary Checks
+    // MARK: - Info Checks
     func testHelloPlain() throws {
         try drop
             .testResponse(to: .get, at: "hello")
@@ -24,7 +24,7 @@ class RouteTests: TestCase {
             .testResponse(to: .get, at: "hello/json")
             .assertStatus(is: .ok)
             .assertJSON("hello", equals: "world")
-        try drop //bad request
+        try drop // bad request
             .testResponse(to: .get, at: "hello/badreq")
             .assertStatus(is: .ok)
             .assertJSON("error", equals: "Bad Request")
@@ -38,7 +38,7 @@ class RouteTests: TestCase {
     }
 
 
-    //MARK: -- Route Tests
+    // MARK: - Route Tests
     func testSingleName() throws {
         try drop
             .testResponse(to: .get, at: "/")
@@ -47,7 +47,7 @@ class RouteTests: TestCase {
     }
 
     func testManyNamesPlain() throws {
-        try drop //no argument supplied
+        try drop // no argument supplied
             .testResponse(to: .get, at: "list")
             .assertStatus(is: .ok)
             .assertBody(contains: "ERROR")
@@ -64,12 +64,12 @@ class RouteTests: TestCase {
     }
 
     func testManyNamesJSON() throws {
-        try drop //amount too big
+        try drop // amount too big
             .testResponse(to: .get, at: "api/list/99999999999999999")
             .assertStatus(is: .ok)
             .assertJSON("status", equals: "error")
             .assertJSON("errCode", equals: "1")
-        try drop //no amount parameter supplied
+        try drop // no amount parameter supplied
             .testResponse(to: .get, at: "/api/list")
             .assertStatus(is: .ok)
             .assertJSON("status", equals: "error")
@@ -83,7 +83,7 @@ class RouteTests: TestCase {
 }
 
 
-// MARK: -- Manifest
+// MARK: - Manifest
 extension RouteTests {
     /// This is a requirement for XCTest on Linux
     /// to function properly.

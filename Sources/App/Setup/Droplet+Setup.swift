@@ -3,13 +3,13 @@
 extension Droplet {
     public func setup() throws {
         // MARK: - Properties
-        let MAX_REQUESTABLE_NAMES: Int = 100
+        let maxRequestableNames: Int = 100
 
         // MARK: - Setup
         print("\n Praeparando Nomina-Romanorum...")
         try setupInfoRoutes()
-        try setupPlainNamesRoutes(maximum: MAX_REQUESTABLE_NAMES)
-        try setupJSONNamesRoutes(maximum: MAX_REQUESTABLE_NAMES)
+        try setupPlainNamesRoutes(maximum: maxRequestableNames)
+        try setupJSONNamesRoutes(maximum: maxRequestableNames)
         try setupEasterEggsRoutes()
         print("Configuratione completa est!\n\n")
     }

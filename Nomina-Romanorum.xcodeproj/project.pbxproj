@@ -34,6 +34,7 @@
 		D155B39A1FC0769400AFD124 /* PlainNamesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */; };
 		D155B39C1FC077EC00AFD124 /* JSONNamesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */; };
 		D155B39E1FC07E3900AFD124 /* EasterEggsRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */; };
+		D155B3A01FC0864800AFD124 /* PlainNamesRoutesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */; };
 		D1F3DD5C1FBCF24500686F9E /* Praenomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */; };
 		D1F3DD5E1FBCF2CF00686F9E /* Nomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */; };
 		D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */; };
@@ -111,7 +112,7 @@
 		OBJ_1126 /* PathIndexable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Node::PathIndexable::Product" /* PathIndexable.framework */; };
 		OBJ_1159 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* PostController.swift */; };
 		OBJ_1160 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Post.swift */; };
-		OBJ_1161 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Routes.swift */; };
+		OBJ_1161 /* InfoRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* InfoRoutes.swift */; };
 		OBJ_1162 /* Config+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Config+Setup.swift */; };
 		OBJ_1163 /* Droplet+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Droplet+Setup.swift */; };
 		OBJ_1165 /* FluentProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "FluentProvider::FluentProvider::Product" /* FluentProvider.framework */; };
@@ -3564,6 +3565,7 @@
 		D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainNamesRoutes.swift; sourceTree = "<group>"; };
 		D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNamesRoutes.swift; sourceTree = "<group>"; };
 		D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggsRoutes.swift; sourceTree = "<group>"; };
+		D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainNamesRoutesTests.swift; sourceTree = "<group>"; };
 		D1F3DD5B1FBCF24500686F9E /* Praenomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Praenomina.swift; path = Sources/App/Names/Praenomina.swift; sourceTree = SOURCE_ROOT; };
 		D1F3DD5D1FBCF2CF00686F9E /* Nomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomina.swift; sourceTree = "<group>"; };
 		D1F3DD5F1FBCF32000686F9E /* Cognomina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cognomina.swift; sourceTree = "<group>"; };
@@ -3620,7 +3622,7 @@
 		OBJ_135 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		OBJ_137 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
 		OBJ_138 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		OBJ_14 /* InfoRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRoutes.swift; sourceTree = "<group>"; };
 		OBJ_140 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/walter/Desktop/Nomina-Romanorum/.build/checkouts/fluent.git-6251908308727715749/Package.swift"; sourceTree = "<group>"; };
 		OBJ_143 /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		OBJ_145 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
@@ -4883,7 +4885,7 @@
 		OBJ_13 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* Routes.swift */,
+				OBJ_14 /* InfoRoutes.swift */,
 				D155B3991FC0769400AFD124 /* PlainNamesRoutes.swift */,
 				D155B39B1FC077EC00AFD124 /* JSONNamesRoutes.swift */,
 				D155B39D1FC07E3900AFD124 /* EasterEggsRoutes.swift */,
@@ -5162,6 +5164,7 @@
 				OBJ_22 /* PostControllerTests.swift */,
 				OBJ_23 /* RouteTests.swift */,
 				OBJ_24 /* Utilities.swift */,
+				D155B39F1FC0864800AFD124 /* PlainNamesRoutesTests.swift */,
 			);
 			name = AppTests;
 			path = Tests/AppTests;
@@ -8168,6 +8171,7 @@
 				OBJ_1015 /* PostControllerTests.swift in Sources */,
 				OBJ_1016 /* RouteTests.swift in Sources */,
 				OBJ_1017 /* Utilities.swift in Sources */,
+				D155B3A01FC0864800AFD124 /* PlainNamesRoutesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8195,7 +8199,7 @@
 				OBJ_1160 /* Post.swift in Sources */,
 				D155B39E1FC07E3900AFD124 /* EasterEggsRoutes.swift in Sources */,
 				D155B39C1FC077EC00AFD124 /* JSONNamesRoutes.swift in Sources */,
-				OBJ_1161 /* Routes.swift in Sources */,
+				OBJ_1161 /* InfoRoutes.swift in Sources */,
 				OBJ_1162 /* Config+Setup.swift in Sources */,
 				D1F3DD601FBCF32000686F9E /* Cognomina.swift in Sources */,
 				OBJ_1163 /* Droplet+Setup.swift in Sources */,
