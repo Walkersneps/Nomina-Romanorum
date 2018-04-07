@@ -13,4 +13,5 @@ _"[Nomina Romanorum]"_ simplex instrumentum ad fortuita Romana nomina generandum
 
 
 
-[Nomina Romanorum]: http://roma.sneps.xyz
+[Nomina Romanorumx]: https://roma.sneps.xyz
+[Nomina Romanorum]: https://roma.vapor.cloud
