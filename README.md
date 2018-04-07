@@ -13,4 +13,4 @@ _"[Nomina Romanorum]"_ simplex instrumentum ad fortuita Romana nomina generandum
 
 
 
-[Nomina Romanorum]: http://nomina-romanorum.herokuapp.com
+[Nomina Romanorum]: http://roma.sneps.xyz
