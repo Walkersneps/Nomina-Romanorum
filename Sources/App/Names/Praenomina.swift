@@ -4,7 +4,6 @@
 //
 //  Created by Walter Carli on 15/11/17.
 //
-
 public struct Praenomina {
     static let list: [String] = [
                                 "Appius",

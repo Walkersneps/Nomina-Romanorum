@@ -1,5 +1,5 @@
-# Nomina Romanorum [![Swift](https://img.shields.io/badge/Swift-4.0.2-orange.svg?style=flat)](https://swift.org/) [![Vapor](https://img.shields.io/badge/Vapor-2.3.0-7bb3d8.svg)](https://github.com/vapor/vapor)
-[![Build Status](https://travis-ci.org/Walkersneps/Nomina-Romanorum.svg?branch=master)](https://travis-ci.org/Walkersneps/Nomina-Romanorum) [![codebeat badge](https://codebeat.co/badges/58aa4523-37d2-4708-8b1c-cab1d6a5b8f6)](https://codebeat.co/projects/github-com-walkersneps-nomina-romanorum-master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/caf3ac925c074d59a7500ea9ff164f78)](https://www.codacy.com/app/walkersneps/Nomina-Romanorum?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Walkersneps/Nomina-Romanorum&amp;utm_campaign=Badge_Grade)
+# Nomina Romanorum [![Swift](https://img.shields.io/badge/Swift-5.1.3-orange.svg?style=flat)](https://swift.org/) [![Vapor](https://img.shields.io/badge/Vapor-2.3.0-7bb3d8.svg)](https://github.com/vapor/vapor)
+[![Swift](https://github.com/Walkersneps/Nomina-Romanorum/workflows/Swift/badge.svg?branch=redo)](https://github.com/Walkersneps/Nomina-Romanorum/actions)
 
 _[Nomina Romanorum]_ is a simple web app whose only purpose is to generate random roman names.
 
