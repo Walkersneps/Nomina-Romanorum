@@ -28,6 +28,6 @@ public struct NameBuilder {
         return (praenomina[prae] + " " + nomina[n] + " " + cognomina[co])
     }
 
-    static func next () -> String { return buildName(from: Praenomina.list, and: Nomina.list, and: Cognomina.list) }
+    func next () -> String { return buildName(from: Praenomina.list, and: Nomina.list, and: Cognomina.list) }
     
 }
