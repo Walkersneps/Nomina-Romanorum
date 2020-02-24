@@ -5,11 +5,7 @@ let maxList: Int = 100 //Maximum amount of names which can be reqested in one sh
 //let defaultHead: String = "<head><meta charset='utf-8'></head>"
 
 // MARK: -- Configuration
-print("\n Praeparando Nomina-Romanorum...")
-print("Docendo artem operandi...")
 let nameBuilder = NameBuilder() // create NameBuilder object
-print("Ars operandi docta est\n")
-print("Configuratione completa est!\n\n")
 
 
 // MARK: --Routes
