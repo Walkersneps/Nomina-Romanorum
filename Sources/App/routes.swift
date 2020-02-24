@@ -1,4 +1,5 @@
 import Vapor
+import Foundation
 
 // MARK: -- Properties
 let maxList: Int = 100 //Maximum amount of names which can be reqested in one shot
