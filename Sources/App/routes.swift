@@ -15,7 +15,8 @@ public func routes(_ router: Router) throws {
 	router.get { req in return "\(nameBuilder.next())\n" }
 	
 	//get many names all at once
-	router.get("list", Int.self) { req, amount in
+	router.get("list", Int.parameter) { req -> String in
+		let amount = try req.parameters.next(Int.self)
 		guard amount <= maxList else { return "ERROR: Parameter 'amount' must be a natural number between 0 and \(maxList).\nYou can't request more than \(maxList) names all at once.\n\nNon è possibile richiedere più di \(maxList) nomi in un colpo solo.\n" } //check we aren't requesting too many names
 		var names: String = ""
 	    for i in 0 ..< amount {
