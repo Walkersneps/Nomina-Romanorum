@@ -35,6 +35,19 @@ public func routes(_ router: Router) throws {
                             "mainText": "\(nameBuilder.next())",
                             "redirectionUrl": "http://www.roma.sneps.xyz"])
 	}	
+	
+	
+	
+	
+	
+	
+	
+	//Brusky's easter egg
+	router.get("brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
+	
+	//my easter egg
+	router.get("w") { req in return "Walter è un fregno della madonna\n" }
+
 
 
 
