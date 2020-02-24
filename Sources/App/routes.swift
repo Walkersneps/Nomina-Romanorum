@@ -26,7 +26,7 @@ public func routes(_ router: Router) throws {
   		return names
 	}
 	
-	router.get("alexa") { req in
+	router.get("alexa") { req -> JSON in
 		let uuid = UUID().uuidString
 		let date = Date()
 		let dateString = date.ISOString(from: date)
