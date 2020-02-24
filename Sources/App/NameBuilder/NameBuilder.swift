@@ -12,7 +12,7 @@
 
 public struct NameBuilder {
     
-    private static func randomInt (min: Int, max: Int) -> Int {
+    private func randomInt (min: Int, max: Int) -> Int {
         #if os(Linux)
             return Glibc.random() % max
         #else
@@ -21,7 +21,7 @@ public struct NameBuilder {
         #endif
     }
 
-    private static func buildName (from praenomina: [String], and nomina: [String], and cognomina: [String]) -> String {
+    private func buildName (from praenomina: [String], and nomina: [String], and cognomina: [String]) -> String {
         let prae: Int = randomInt(min: 0, max: praenomina.count)
         let n: Int = randomInt(min: 0, max: nomina.count)
         let co: Int = randomInt(min: 0, max: cognomina.count)
