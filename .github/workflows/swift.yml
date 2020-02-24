@@ -5,10 +5,20 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
+    - name: Check Swift
+      run: swift --version
+    - name: Install Dependencies
+      run: echo "Installing dependencies..."
+    - name: Install pkg-config
+      run: apt-get install pkg-config
+    - name: Install libressl
+      run: apt-get install libressl
+    - name: Done Dependencies"
+      run: echo "All dependencies installed!"
     - name: Build
       run: swift build -v
     - name: Run tests
