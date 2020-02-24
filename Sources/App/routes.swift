@@ -23,6 +23,17 @@ public func routes(_ router: Router) throws {
     		names += "\(nameBuilder.next())\n"
   		}
   		return names
+	}
+	
+	router.get("alexa") { req in
+		let uuid = UUID().uuidString
+		let date = Date()
+		let dateString = date.ISOString(from: date)
+		return try JSON(node: ["uid": uuid,
+                            "updateDate": dateString,
+                            "titleText": "Nome Romano:",
+                            "mainText": "\(nameBuilder.next())",
+                            "redirectionUrl": "http://www.roma.sneps.xyz"])
 	}	
 
 
