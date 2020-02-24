@@ -13,10 +13,12 @@ jobs:
       run: swift --version
     - name: Install Dependencies
       run: echo "Installing dependencies..."
+    - name: Install Homebrew
+      run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     - name: Install pkg-config
-      run: apt-get install pkg-config
+      run: brew install pkg-config
     - name: Install libressl
-      run: apt-get install libressl
+      run: brew install libressl
     - name: Done Dependencies"
       run: echo "All dependencies installed!"
     - name: Build
