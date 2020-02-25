@@ -26,17 +26,17 @@ public func routes(_ router: Router) throws {
   		return names
 	}
 	
-	router.get("alexa") { req -> JSON in
+	router.get("alexa") { req -> NewsJSON in
 		let uuid = UUID().uuidString
 		/*let date = Date()
 		let dateString = date.ISOString(from: date)*/
 		let DF = ISO8601DateFormatter.init()
 		let dateString = i.string(from: Date())
-		return try JSON(node: ["uid": uuid,
-                            "updateDate": dateString,
-                            "titleText": "Nome Romano:",
-                            "mainText": "\(nameBuilder.next())",
-                            "redirectionUrl": "http://www.roma.sneps.xyz"])
+		return NewsJSON(uid: uuid,
+                        updateDate: dateString,
+                    	titleText: "Nome Romano:",
+                    	mainText: "\(nameBuilder.next())",
+                	    redirectionUrl: "http://www.roma.sneps.xyz")
 	}	
 	
 	
