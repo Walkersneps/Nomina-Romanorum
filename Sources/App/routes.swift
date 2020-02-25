@@ -35,7 +35,7 @@ public func routes(_ router: Router) throws {
 		return NewsJSON(uid: uuid,
                         updateDate: dateString,
                     	titleText: "Nome Romano:",
-                    	mainText: "\(nameBuilder.next())",
+                    	mainText: "\(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()).",
                 	    redirectionUrl: "http://www.roma.sneps.xyz")
 	}	
 	
