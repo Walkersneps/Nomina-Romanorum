@@ -1,4 +1,5 @@
 import Vapor
+import Foundation
 
 // MARK: -- Properties
 let maxList: Int = 100 //Maximum amount of names which can be reqested in one shot
@@ -23,7 +24,33 @@ public func routes(_ router: Router) throws {
     		names += "\(nameBuilder.next())\n"
   		}
   		return names
+	}
+	
+	router.get("alexa") { req -> NewsJSON in
+		let uuid = UUID().uuidString
+		let date = Date()
+		let dateString = Date.ISOString(from: date)
+		/*let DF = ISO8601DateFormatter.init()
+		let dateString = i.string(from: Date())*/
+		return NewsJSON(uid: uuid,
+                        updateDate: dateString,
+                    	titleText: "Nome Romano:",
+                    	mainText: "\(nameBuilder.next())",
+                	    redirectionUrl: "http://www.roma.sneps.xyz")
 	}	
+	
+	
+	
+	
+	
+	
+	
+	//Brusky's easter egg
+	router.get("brusky") { req in return "BRUSCHIIIIII!! \n PARACADUTE! PARACADUTE!\n" }
+	
+	//my easter egg
+	router.get("w") { req in return "Walter è un fregno della madonna\n" }
+
 
 
 
