@@ -11,7 +11,7 @@
 #endif
 
 public struct NameBuilder {
-    
+
     private func randomInt (min: Int, max: Int) -> Int {
         #if os(Linux)
             return Glibc.random() % max
@@ -29,5 +29,5 @@ public struct NameBuilder {
     }
 
     func next () -> String { return buildName(from: Praenomina.list, and: Nomina.list, and: Cognomina.list) }
-    
+
 }
