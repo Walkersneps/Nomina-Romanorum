@@ -1,7 +1,7 @@
 import Foundation
 import Vapor
 
-struct JSON: Content {}
+protocol JSON: Content {}
 
 struct NamesJSON: JSON {
 	var uid: String
