@@ -15,11 +15,11 @@ struct ErrJSON: JSON {
 	var maxNumericParam: String
 }
 
-public let outOfBoundsRequestJSON = ErrJSON(status: "error",
-																						errCode: "1",
-																						description: "parameter 'amount' is either too big or smaller than 1",
-																						maxNumericParam: String(maxList));
-public let noParameterSuppliedJSON = ErrJSON(status: "error",
-																						errCode: "2",
-																						description: "must supply numeric parameter",
-																						maxNumericParam: String(maxList))
+let outOfBoundsRequestJSON = ErrJSON(status: "error",
+																			errCode: "1",
+																			description: "parameter 'amount' is either too big or smaller than 1",
+																			maxNumericParam: String(maxList));
+let noParameterSuppliedJSON = ErrJSON(status: "error",
+																			errCode: "2",
+																			description: "must supply numeric parameter",
+																			maxNumericParam: String(maxList))
