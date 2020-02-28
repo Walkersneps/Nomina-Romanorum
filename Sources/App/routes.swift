@@ -27,7 +27,7 @@ public func routes(_ router: Router) throws {
 	}
 
 	router.get("alexa") { req -> NewsJSON in
-		txt = "\(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next())."
+		let txt = "\(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next())."
 		return AlexaJSON.build(with: txt, title:"Romana Nomina:", url:"http://www.roma.sneps.xyz")
 	}
 
