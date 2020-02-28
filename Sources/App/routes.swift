@@ -9,7 +9,7 @@ let maxList: Int = 100 //Maximum amount of names which can be reqested in one sh
 let nameBuilder = NameBuilder() // create NameBuilder object
 
 
-// MARK: --Routes
+// MARK: -- Routes
 public func routes(_ router: Router) throws {
 
 	//default route -> standard name generation
@@ -26,11 +26,13 @@ public func routes(_ router: Router) throws {
   		return names
 	}
 
+	//Alexa-newsfeed skill formatted JSON response
 	router.get("alexa") { req -> NewsJSON in
 		let txt = "\(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next()). \(nameBuilder.next())."
 		return AlexaJSON.build(with: txt, title:"Romana Nomina:", url:"http://www.roma.sneps.xyz")
 	}
 
+	//JSON formatted list of names
 	router.get("api", "list", Int.parameter) { req -> JSON in
 		let n = try req.parameters.next(Int.self)
 		guard n <= maxList && n > 0 else { return outOfBoundsRequestJSON }
@@ -55,44 +57,6 @@ public func routes(_ router: Router) throws {
 	router.get("w") { req in return "Walter è un fregno della madonna\n" }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-/// Register your application's routes here.
-public func routes(_ router: Router) throws {
-    // Basic "It works" example
-    router.get { req in
-        return "It works!"
-    }
-
-    // Basic "Hello, world!" example
-    router.get("hello") { req in
-        return "Hello, world!"
-    }
-
-    // Example of configuring a controller
-    let todoController = TodoController()
-    router.get("todos", use: todoController.index)
-    router.post("todos", use: todoController.create)
-    router.delete("todos", Todo.parameter, use: todoController.delete)
-
-
-
-
-    */
 
 
 
