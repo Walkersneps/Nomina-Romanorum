@@ -2,12 +2,12 @@ import Foundation
 import Vapor
 
 struct JSON: Content {
-	var uid: String
-	var nomina: [String:String]
-	var status: String
-	var errCode: String
-	var description: String
-	var maxNumericParam: String
+	var uid: String?
+	var nomina: [String:String]?
+	var status: String?
+	var errCode: String?
+	var description: String?
+	var maxNumericParam: String?
 }
 
 let outOfBoundsRequestJSON = JSON(status: "error",
