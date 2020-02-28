@@ -35,7 +35,7 @@ public func routes(_ router: Router) throws {
 		let n = try req.parameters.next(Int.self)
 		guard n <= maxList && n > 0 else { return outOfBoundsRequestJSON }
 		var nameDict: [String:String] = [:]
-		for i in 0 ..< n { nameDict["nomen\(i)"] = NameBuilder.next() }
+		for i in 0 ..< n { nameDict["nomen\(i)"] = nameBuilder.next() }
 		return NamesJSON(uid: UUID().uuidString, nomina: nameDict)
 	}
 
