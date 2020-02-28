@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Hello",
+    name: "Nomina Romanorum",
     products: [
         .library(name: "Hello", targets: ["App"]),
     ],
@@ -19,4 +19,3 @@ let package = Package(
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]
 )
-
