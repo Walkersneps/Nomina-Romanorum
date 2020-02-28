@@ -13,4 +13,4 @@ _[Nomina Romanorum]_ è una semplice web app il cui unico scopo, che è fondamen
 
 
 
-[Nomina Romanorumx]: http://roma.sneps.xyz
+[Nomina Romanorum]: http://roma.sneps.xyz
