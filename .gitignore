@@ -5,6 +5,7 @@ Config/secrets
 
 ### Vapor Patch ###
 Packages
+Package.resolved
 .build
 xcuserdata
 #*.xcodeproj
